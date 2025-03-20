@@ -13,5 +13,19 @@ public class App {
         System.out.println("Texto original: "+texto);
         System.out.println("Texto codificado: "+codificado);
         System.out.println("Texto decodificado: "+decodificado);
+
+        // Codificador Cesar
+        Codificador codCesar = new CodificadorCesar(3);
+
+        System.out.println("Codificador: "+codCesar.getNome());
+        System.out.println("Versao: "+codCesar.getDataCriacao());
+        System.out.println("Nivel de segurança: "+codCesar.getNivelSeguranca());
+        
+        String codificadoCesar = codCesar.codifica(texto);
+        String decodificadoCesar = codCesar.decodifica(codificadoCesar);
+
+        System.out.println("Texto original: "+texto);
+        System.out.println("Texto codificado: "+codificadoCesar);
+        System.out.println("Texto decodificado: "+decodificadoCesar);
     }
 }
